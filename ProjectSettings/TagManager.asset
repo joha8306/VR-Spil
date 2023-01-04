@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Terrain
+  - Red
+  - White
+  - Black
+  - Yellow
+  - Blue
+  - cube
+  - CannonBall
+  - Wall
   layers:
   - Default
   - TransparentFX

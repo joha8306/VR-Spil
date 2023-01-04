@@ -24,6 +24,11 @@ public class Mennesker : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.collider.tag == "CannonBall")
+        {
+            Destroy(gameObject);
+        }
+
     }
 
 }
