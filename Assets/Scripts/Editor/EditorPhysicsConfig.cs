@@ -287,7 +287,7 @@ public class EditorPhysicsConfig : EditorWindow
         }
     }
 
-    private void LaunchCatapult()
+    public void LaunchCatapult()
     {
         GameManager.GetInstance().LaunchFreePlayCannonBall();
     }
