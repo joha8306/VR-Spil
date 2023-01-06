@@ -1704,9 +1704,10 @@ GameObject:
   - component: {fileID: 4315305132775174571}
   - component: {fileID: 4315305132775174572}
   - component: {fileID: 3599354922542435716}
+  - component: {fileID: -5726405298537604721}
   m_Layer: 0
   m_Name: HumanMale_Character
-  m_TagString: Untagged
+  m_TagString: Menneske
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1761,6 +1762,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e66a40dfc597fe14793d91391b4e82a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5726405298537604721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4315305132775174573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529b907a2e1d4b3408d25d48c4b50b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AntalMennesker: 0
+  Mennesker: []
+  Menneske: {fileID: 4315305132775174573}
 --- !u!1 &4315305132798889559
 GameObject:
   m_ObjectHideFlags: 0
