@@ -13,6 +13,7 @@ TagManager:
   - cube
   - CannonBall
   - Wall
+  - Menneske
   layers:
   - Default
   - TransparentFX
