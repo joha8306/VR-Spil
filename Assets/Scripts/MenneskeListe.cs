@@ -5,44 +5,38 @@ using UnityEngine.SceneManagement;
 
 public class MenneskeListe : MonoBehaviour
 {
-    
-    public List<GameObject> Mennesker = new List<GameObject>();
-    public GameObject Menneske;
+    public List<GameObject> gameObjects;
+    public GameObject[] array;
+
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("AddHumanToList", 0);
+        array = GameObject.FindGameObjectsWithTag("Menneske");
+        foreach (GameObject mennekse in array)
+        {
+            gameObjects.Add(mennekse);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Mennesker.Count==0)
+        foreach (GameObject mennekse in array)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            print("Scene reset");
+            if(mennekse == null)
+            {
+                gameObjects.Remove(mennekse);
+            }
         }
-
-
+        print(gameObjects.Count);
+        if(gameObjects.Count == 1)
+        {
+            Invoke("Restart", 3);
+        }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void Restart()
     {
-        if (collision.collider.tag == "Wall")
-        {
-            Mennesker.Remove(Menneske);
-        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-
-    public void AddHumanToList()
-    {
-        GameObject[] objs= GameObject.FindGameObjectsWithTag("Menneske");
-        foreach( GameObject men in objs)
-        {
-            Mennesker.Add(men);
-        }
-        
-    }
-
 }
